@@ -1,3 +1,23 @@
-*.ipynb
+#Cache
 *.html
 *.json
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter notebooks
+*.ipynb
+
+# Environment
+.env
+.venv/
+*.env
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+# MacOS / Windows
+.DS_Store
+Thumbs.db
