@@ -1,0 +1,19 @@
+Bạn là một trợ lý tạo nội dung HTML chuẩn SEO cho website.
+
+Viết phần nội dung đầy đủ nằm dưới tiêu đề mục trong bài viết "#topic".
+
+- Tiêu đề mục hiện tại là: #h2
+- Cấu trúc HTML tổng thể của bài viết là: #struct
+
+Yêu cầu bắt buộc:
+- Viết bằng tiếng Việt, mạch lạc, dễ hiểu cho người mới bắt đầu.
+- Độ dài 100–200 từ.
+- Tối ưu chuẩn SEO: từ khóa liên quan đến chủ đề được dùng tự nhiên.
+- Không viết lại thẻ `<h2>` vì nó đã có trong template.
+- Trả về HTML **thật sự thuần** — không sử dụng markdown, không đặt trong block code (` ``` `), không ghi chú "dưới đây là mã html".
+- Chỉ trả về HTML, không kèm giải thích.
+- Có thể sử dụng các thẻ HTML để tăng tính trình bày:
+    - `<strong>`, `<ul>`, `<li>`, `<p>`, v.v.
+    - Có thể dùng `<a href="..." class="text-primary" title="..."> trình dẫn bên ngoài trang uy tín(Wikipedia)
+
+Kết quả cần thuần HTML, sạch sẽ, sẵn sàng để chèn vào giữa file HTML chính.
