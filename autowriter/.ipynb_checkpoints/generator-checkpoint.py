@@ -11,6 +11,7 @@ class ArticleGenerator:
         self.temperature = temperature
 
     def load_prompt(self, filename: str, **replacements) -> str:
+        # Đảm bảo luôn đọc file trong thư mục "prompts" của thư viện
         prompts_dir = os.path.join(os.path.dirname(__file__), "prompts")
         path = os.path.join(prompts_dir, filename)
         with open(path, "r", encoding="utf-8") as f:
@@ -23,7 +24,7 @@ class ArticleGenerator:
         try:
             # Bước 1: Sinh cấu trúc HTML ban đầu
             print("🔧 creating article structure...")
-            structure_prompt = self.load_prompt("prompts/structure.txt", topic=topic)
+            structure_prompt = self.load_prompt("structure.txt", topic=topic)
 
             structure_response = self.client.chat.completions.create(
                 model=self.model,
@@ -39,7 +40,7 @@ class ArticleGenerator:
                 print(f"📝 creating content for heading: {h2_text}")
 
                 heading_prompt = self.load_prompt(
-                    "prompts/heading.txt",
+                    "heading.txt",
                     topic=topic,
                     h2=h2_text,
                     struct=str(soup)
