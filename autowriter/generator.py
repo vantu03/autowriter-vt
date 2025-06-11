@@ -2,7 +2,7 @@ from datetime import date
 from openai import OpenAI
 from bs4 import BeautifulSoup
 from slugify import slugify
-import json
+import json, os
 
 class ArticleGenerator:
     def __init__(self, api_key: str, model="gpt-4o", temperature=0.7):
@@ -10,8 +10,10 @@ class ArticleGenerator:
         self.model = model
         self.temperature = temperature
 
-    def load_prompt(self, filepath: str, **replacements) -> str:
-        with open(filepath, "r", encoding="utf-8") as f:
+    def load_prompt(self, filename: str, **replacements) -> str:
+        prompts_dir = os.path.join(os.path.dirname(__file__), "prompts")
+        path = os.path.join(prompts_dir, filename)
+        with open(path, "r", encoding="utf-8") as f:
             content = f.read()
         for key, val in replacements.items():
             content = content.replace(f"#{key}", val)
