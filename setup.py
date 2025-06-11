@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="autowriter-vt",
-    version="1.1.2",
+    version="1.1.3",
     author="Ma Văn Tú",
     description="AI-based content generator for Vietnamese articles",
     long_description=open("README.md", encoding="utf-8").read(),
@@ -16,4 +16,7 @@ setup(
     ],
     python_requires=">=3.7",
     include_package_data=True,
+    package_data={
+        "autowriter": ["prompts/*.txt"],
+    },
 )
