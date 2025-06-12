@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="autowriter-vt",
-    version="1.1.7",
+    version="1.2.0",
     author="Ma Văn Tú",
     description="AI-based content generator for Vietnamese articles",
     long_description=open("README.md", encoding="utf-8").read(),

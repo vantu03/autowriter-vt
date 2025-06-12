@@ -47,15 +47,13 @@ class ArticleGenerator:
                 )
 
                 try:
-                    heading_response = self.client.responses.create(
+                    heading_response = self.client.chat.completions.create(
                         model=self.model,
-                        input=heading_prompt,
-                        tools=[{
-                            "type": "web_search_preview",
-                            "recency": 365
-                        }]
+                        messages=[{"role": "user", "content": heading_prompt}],
+                        temperature=self.temperature,
                     )
-                    heading_content = heading_response.output_text
+
+                    heading_content = heading_response.choices[0].message.content
 
                     
                     # Xoá các node placeholder ngay sau <h2>
