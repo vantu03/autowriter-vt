@@ -14,6 +14,6 @@ Yêu cầu bắt buộc:
 - Chỉ trả về HTML, không kèm giải thích.
 - Có thể sử dụng các thẻ HTML để tăng tính trình bày:
     - `<strong>`, `<ul>`, `<li>`, `<p>`, v.v.
-    - Có thể dùng `<a href="..." class="text-primary" title="..."> trình dẫn bên ngoài trang uy tín(Wikipedia)
+    - Có thể dùng `<a href="..." class="text-primary" title="..."> trình dẫn bên ngoài trang uy tín(Wikipedia, Dienmayxanh.com, ...)
 
 Kết quả cần thuần HTML, sạch sẽ, sẵn sàng để chèn vào giữa file HTML chính.

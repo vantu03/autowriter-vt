@@ -5,7 +5,7 @@ from slugify import slugify
 import json, os
 
 class ArticleGenerator:
-    def __init__(self, api_key: str, model="gpt-4o", temperature=0.7):
+    def __init__(self, api_key: str, model="gpt-4.1", temperature=0.7):
         self.client = OpenAI(api_key=api_key)
         self.model = model
         self.temperature = temperature
