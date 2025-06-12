@@ -5,7 +5,7 @@ from slugify import slugify
 import json, os
 
 class ArticleGenerator:
-    def __init__(self, api_key: str, model="gpt-4.1", temperature=0.7):
+    def __init__(self, api_key: str, model="gpt-4.1", temperature=0.3):
         self.client = OpenAI(api_key=api_key)
         self.model = model
         self.temperature = temperature
@@ -47,12 +47,16 @@ class ArticleGenerator:
                 )
 
                 try:
-                    heading_response = self.client.chat.completions.create(
-                        model=self.model,
-                        messages=[{"role": "user", "content": heading_prompt}],
-                        temperature=self.temperature,
-                    )
-                    heading_content = heading_response.choices[0].message.content
+                    heading_response = self.client.responses.create(
+                    model=self.model,
+                    input=heading_prompt,
+                    tools=[{
+                        "type": "web_search_preview",
+                        "recency": 365
+                    }]
+                )
+                heading_content = heading_response.output_text
+
                     
                     # Xoá các node placeholder ngay sau <h2>
                     next_node = h2.find_next_sibling()

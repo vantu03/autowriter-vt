@@ -16,6 +16,7 @@ Yêu cầu:
   - `<h2>`: mỗi phần chính trong bài viết
 - Bao toàn bộ bài viết trong `<div class="container">`
 - Không có nội dung gì trong thẻ h2 vì là template
+- thẻ `title` là tiêu đề bài viết có chứa từ khóa chính
 
 Cấu trúc khuyến nghị:
 
@@ -27,6 +28,5 @@ Cấu trúc khuyến nghị:
    - ...
    - `<h2>`
 - Các thẻ h2 dựa vào `#topic` để tạo ra sao cho chuẩn seo Goolge tìm kiếm
-- Trang trí nhẹ bằng boostrap, 
 - Trả về HTML **thật sự thuần** — không sử dụng markdown, không đặt trong block code (` ``` `), không ghi chú "dưới đây là mã html".
 - Trả về HTML thuần có định dạng sạch sẽ để xử lý tiếp bằng các request khác
