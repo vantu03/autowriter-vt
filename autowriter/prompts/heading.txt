@@ -13,7 +13,7 @@ Yêu cầu bắt buộc:
 - Trả về HTML **thật sự thuần** — không sử dụng markdown, không đặt trong block code (` ``` `), không ghi chú "dưới đây là mã html".
 - Chỉ trả về HTML, không kèm giải thích.
 - Có thể sử dụng các thẻ HTML để tăng tính trình bày:
-    - thẻ `a` có `title` để tốt cho SEO hơn `href` nên dùng ở các nguồn uy tín tránh die link
     - `<strong>`, `<ul>`, `<li>`, `<p>`, v.v.
+    - thẻ `a` có `title` để tốt cho SEO hơn `href` nên dùng ở các nguồn uy tín tránh bị sập link như wikipedia,...
 
 Kết quả cần thuần HTML, sạch sẽ, sẵn sàng để chèn vào giữa file HTML chính.
