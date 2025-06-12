@@ -48,14 +48,14 @@ class ArticleGenerator:
 
                 try:
                     heading_response = self.client.responses.create(
-                    model=self.model,
-                    input=heading_prompt,
-                    tools=[{
-                        "type": "web_search_preview",
-                        "recency": 365
-                    }]
-                )
-                heading_content = heading_response.output_text
+                        model=self.model,
+                        input=heading_prompt,
+                        tools=[{
+                            "type": "web_search_preview",
+                            "recency": 365
+                        }]
+                    )
+                    heading_content = heading_response.output_text
 
                     
                     # Xoá các node placeholder ngay sau <h2>
