@@ -14,7 +14,5 @@ Yêu cầu bắt buộc:
 - Chỉ trả về HTML, không kèm giải thích.
 - Có thể sử dụng các thẻ HTML để tăng tính trình bày:
     - `<strong>`, `<ul>`, `<li>`, `<p>`, v.v.
-    - Các liên kết ngoài phải dùng thẻ `<a>` với `href` là **link thật** và có thuộc tính `title`.
-    - Không dùng ví dụ kiểu `example.com`, chỉ chấp nhận link thực sự đang tồn tại.
 
 Kết quả cần thuần HTML, sạch sẽ, sẵn sàng để chèn vào giữa file HTML chính.
